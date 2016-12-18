@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Click 2 Swipe Demo</title>
+	<meta name="viewport" content="width=device-width" />
+	<style type="text/css">
+		body { background-color: #030; }
+		h1 { color: white; text-align: center; }
+		#page { background-color: white; max-width: 600px; margin: 0px auto; padding: 25px; border: 1px solid #0c0; border-radius: 25px; }
+		label { display: inline-block; width: 110px; margin-right: 25px; font-weight: bold; }
+		#trigger { cursor: pointer; }
+		#page > p:last-child { text-align: right; }
+		#c2s { display: none; background-color: White; padding: 10px; border: 1px solid #060; border-radius: 25px; max-width: 250px; }
+		#c2s_wait { color: Red; }
+		#c2s_cancel { color: #060; cursor: pointer; }
+	</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+		<h1>Click to Swipe Demo</h1>
+		<div id="page">
+			<p>This demo will demonstrate the patent-pending technology of Click-2-Swipe&trade;.  Click on the button below and swipe a credit card to see this in action.</p>
+			<p><label for="fname">First Name</label><input id="fname" type="text" placeholder="First Name" /></p>
+			<p><label for="lname">Last Name</label><input id="lname" type="text" placeholder="Last Name" /></p>
+			<p><label for="cardnumber">Card Number</label><input id="cardnumber" type="text" placeholder="Card Number" /></p>
+			<p><label for="expires">Expiration</label><input id="expires" type="text" placeholder="Expiration" /></p>
+			<p><label for="cvv">CVV Code</label><input id="cvv" type="text" placeholder="CVV Code" /></p>
+			<p><img id="trigger" src="click2swipe110x25.png" /></p>
+		</div>
+		<div id="c2s" style="text-align:center">
+			<p style="margin:0px;color:#060;font-weight:bold;font-size:36px">SWIPE!</p>
+			<p id="c2s_wait" style="color:red;display:none;">Please wait ...</p>
+			<p>You may swipe your card now.  To learn more about <span style="white-space:nowrap;">Click-2-Swipe&trade;</span> go <a href="http://www.indasysllc.com/click2swipe" target="_blank">here</a>.</p>
+			<p>(<span id="c2s_cancel">cancel</span>)</p>
+		</div>
+		<script src="click2swipe.js?v=1.4" type="text/javascript"></script>
+    </form>
+</body>
+</html>
